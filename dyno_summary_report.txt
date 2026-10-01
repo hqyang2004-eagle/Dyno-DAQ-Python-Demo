@@ -1,0 +1,41 @@
+﻿Dyno Data Summary Report
+========================
+
+Project Software Scope
+----------------------
+This software processes dynamometer data after force and RPM data are collected.
+It does not replace measurement hardware, DAQ hardware, absorber control, or safety systems.
+
+System Configuration
+--------------------
+Input mode: combined
+Force input type: force
+Torque arm length: 1.0 ft
+Zero offset applied: 12.3333 lbf
+Moving average window: 3
+
+Calibration
+-----------
+Force = 1.000000 * raw_input + 0.000000
+Calibration R^2: Not used
+
+Key Results
+-----------
+Peak torque: 29.333333333333332 lb-ft at 5600.0 RPM
+Peak horsepower: 31.276973851231276 hp at 5600.0 RPM
+Average torque uncertainty: 0.21381662935580292 lb-ft
+Average horsepower uncertainty: 0.15456909718301973 hp
+
+Statistics
+----------
+Force stats: {'min': -2.333333333333334, 'max': 29.333333333333332, 'avg': 11.15151515151515, 'count': 11}
+Torque stats: {'min': -2.333333333333334, 'max': 29.333333333333332, 'avg': 11.15151515151515, 'count': 11}
+RPM stats: {'min': 2000.0, 'max': 5600.0, 'avg': 3663.6363636363635, 'count': 11}
+Horsepower stats: {'min': -0.8885503935008888, 'max': 31.276973851231276, 'avg': 10.177940871010177, 'count': 11}
+
+Equations Used
+--------------
+Torque = Force * Torque Arm Length
+Horsepower = Torque * RPM / 5252
+Torque uncertainty = sqrt((r*uF)^2 + (F*ur)^2)
+Horsepower relative uncertainty = sqrt((uT/T)^2 + (uRPM/RPM)^2)
